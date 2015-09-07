@@ -2,6 +2,8 @@
 
 Datadog Event plugin for [alerty](https://github.com/sonots/alerty).
 
+## Spcial Thanks
+
 I used the blog post & source code below as reference. Thank you!!!
 
 - http://blog.livedoor.jp/sonots/archives/45330651.html
