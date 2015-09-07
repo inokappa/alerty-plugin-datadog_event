@@ -26,7 +26,6 @@ following is required.
 - **api_key** : Datadog API Key 
 - **subject** : subject of alert. ${command} is replaced with a given command, ${hostname} is replaced with the hostname ran a command
 - **alert_type** : "error", "warning", "info" or "success". See [Datadog API Document](http://docs.datadoghq.com/ja/api/#events).
-- **source_type_name** : The type of event being posted. See [Datadog API Document](http://docs.datadoghq.com/ja/api/#events).
 
 following is an example.
 
@@ -40,7 +39,6 @@ plugins:
     api_key: API Key
     subject: "FAILURE [${hostname}] : ${command}"
     alert_type: error
-    source_type_name: Cron
 ```
 
 See [examle.yml](https://github.com/inokappa/alerty-plugin-datadog_event/blob/master/example.yml).
