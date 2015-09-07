@@ -20,13 +20,13 @@ Or install it yourself as:
 
 ## Configuration
 
-following required.
+following is required.
 
 - type: must be datadog_event
 - api_key: Datadog API Key 
 - subject: subject of alert. ${command} is replaced with a given command, ${hostname} is replaced with the hostname ran a command
 
-following example.
+following is an example.
 
 ```
 log_path: STDOUT
@@ -39,7 +39,7 @@ plugins:
     subject: "FAILURE [${hostname}] : ${command}"
 ```
 
-See examle.yml.
+See [examle.yml](https://github.com/inokappa/alerty-plugin-datadog_event/blob/master/example.yml).
 
 ## Development
 
