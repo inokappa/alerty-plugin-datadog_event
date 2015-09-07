@@ -6,3 +6,5 @@ plugins:
   - type: datadog_event
     api_key: API_KEY
     subject: "FAILURE [${hostname}] : ${command}"
+    alert_type: error
+    source_type_name : cron_job

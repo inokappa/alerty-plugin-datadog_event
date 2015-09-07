@@ -9,17 +9,18 @@ class Alerty
       def initialize(config)
         @client = Dogapi::Client.new(config.api_key)
         @subject = config.subject
+        @alert_type = config.alert_type
+        @source_type_name = config.source_type_name
         @num_retries = config.num_retries || 3
       end
 
       def alert(record)
         message = record[:output]
-        hostname = record[:hostname]
         subject = expand_placeholder(@subject, record)
         timestamp = Time.now.to_i
         retries = 0
         begin
-          @client.emit_event(Dogapi::Event.new(message, :msg_title => subject, :alert_type => "error", :date_happened => timestamp), :host => hostname)
+          @client.emit_event(Dogapi::Event.new(message, :msg_title => subject, :alert_type => @alert_type, :source_type_name => @source_type_name ,:date_happened => timestamp), :host => record[:hostname])
           Alerty.logger.info "Sent #{{subject: subject, message: message}} to Datadog Event"
         rescue => e
           retries += 1

@@ -22,9 +22,11 @@ Or install it yourself as:
 
 following is required.
 
-- type: must be datadog_event
-- api_key: Datadog API Key 
-- subject: subject of alert. ${command} is replaced with a given command, ${hostname} is replaced with the hostname ran a command
+- **type** : must be datadog_event
+- **api_key** : Datadog API Key 
+- **subject** : subject of alert. ${command} is replaced with a given command, ${hostname} is replaced with the hostname ran a command
+- **alert_type** : "error", "warning", "info" or "success". See [Datadog API Document](http://docs.datadoghq.com/ja/api/#events).
+- **source_type_name** : The type of event being posted. See [Datadog API Document](http://docs.datadoghq.com/ja/api/#events).
 
 following is an example.
 
@@ -36,6 +38,8 @@ lock_path: /tmp/lock
 plugins:
   - type: datadog_event
     api_key: API Key
+    subject: "FAILURE [${hostname}] : ${command}"
+    subject: "FAILURE [${hostname}] : ${command}"
     subject: "FAILURE [${hostname}] : ${command}"
 ```
 
