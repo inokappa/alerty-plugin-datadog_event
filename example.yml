@@ -1,0 +1,8 @@
+log_path: STDOUT
+log_level: 'debug'
+timeout: 10
+lock_path: /tmp/lock
+plugins:
+  - type: datadog_event
+    api_key: API_KEY
+    subject: "FAILURE [${hostname}] : ${command}"
