@@ -2,6 +2,11 @@
 
 Datadog Event plugin for [alerty](https://github.com/sonots/alerty).
 
+I used the blog post & source code below as reference. Thank you!!!
+
+- http://blog.livedoor.jp/sonots/archives/45330651.html
+- [alerty-plugin-amazon_sns](https://github.com/sonots/alerty-plugin-amazon_sns)
+
 ## Installation
 
 Add this line to your application's Gemfile:
