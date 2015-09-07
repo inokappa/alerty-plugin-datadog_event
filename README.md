@@ -39,8 +39,8 @@ plugins:
   - type: datadog_event
     api_key: API Key
     subject: "FAILURE [${hostname}] : ${command}"
-    subject: "FAILURE [${hostname}] : ${command}"
-    subject: "FAILURE [${hostname}] : ${command}"
+    alert_type: error
+    source_type_name: Cron
 ```
 
 See [examle.yml](https://github.com/inokappa/alerty-plugin-datadog_event/blob/master/example.yml).
